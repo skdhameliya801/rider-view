@@ -1,4 +1,4 @@
 export let CONSTANTS = {
-    server_url : "http://localhost:5000",
+    server_url : "https://rider-api.cyclic.app",
     client_url : ""
 }
