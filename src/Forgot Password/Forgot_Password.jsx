@@ -6,12 +6,14 @@ import axios from 'axios';
 const Forgot_Password = () => {
 
     useEffect(() => {
+        document.getElementById("set_new_pass_btn").innerHTML = "Set New Password";
         document.getElementById("response_message").style.display = "none";
     }, [])
     
 
     let form_forgot_pass_submit = (event) => {
         event.preventDefault(); 
+        document.getElementById("set_new_pass_btn").innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>';
 
         let form_data = JSON.stringify({
             "whatsapp_no": document.getElementById("whatsapp_no").value,
@@ -32,25 +34,28 @@ const Forgot_Password = () => {
     
             axios.request(config)
                 .then((response) => {
-                console.log(response.data);
+                // console.log(response.data);
+                document.getElementById("set_new_pass_btn").innerHTML = "Set New Password";
                 document.getElementById("response_message").style.display = "block";
                 document.getElementById("response_message").innerHTML = response.data.message;
             })
             .catch((error) => {
+                document.getElementById("set_new_pass_btn").innerHTML = "Set New Password";
                 console.log(error);
             });
         }else{
+            document.getElementById("set_new_pass_btn").innerHTML = "Set New Password";
             alert("password and confirm password are not same");
         }
     }
 
   return (
-    <div className="container">
+    <div className="container p-2">
         <div className="row">
             <div className="col">
                 <div class="d-flex justify-content-center align-items-center" style={{"height":"100vh"}}>
                     <form onSubmit={form_forgot_pass_submit} className='border border-primary bg-warning rounded-5 p-5 '>
-                        {/* <h1 className="text-center">Confirm Rides</h1> */}
+                        <h1 className="text-center">Forgot Password</h1>
                         <p className="text-center bg-danger p-2" id='response_message'></p>
                         <div class="m-3">
                             <label for="formGroupExampleInput" class="form-label">WhatsApp No.</label>
@@ -59,7 +64,7 @@ const Forgot_Password = () => {
                         <div class="m-3">
                             <label for="formGroupExampleInput" class="form-label">Write your security code</label>
                             <input type="text" class="form-control" id="security_code" placeholder="" required />
-                            <b>Not remembered? <a href="">click here chat with us</a></b>
+                            <b>Not remembered? <a href="https://wa.me/+15483333597?text=Hi, I forgot my security code." target='_blank'>click here to chat with us</a></b>
                         </div>
                         <div class="m-3">
                             <label for="formGroupExampleInput" class="form-label">Password</label>
@@ -94,7 +99,7 @@ const Forgot_Password = () => {
                             <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="" />
                         </div> */}
                         <div class="m-3">
-                            <button type="submit" className='btn btn-success'>Set New Password</button>
+                            <button type="submit" id='set_new_pass_btn' className='btn btn-success'>Set New Password</button>
                         </div>
                         <div class="m-3">
                             <Link to={'/login'}>Login?</Link>
