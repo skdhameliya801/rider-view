@@ -64,7 +64,7 @@ const Forgot_Password = () => {
                         <div class="m-3">
                             <label for="formGroupExampleInput" class="form-label">Write your security code</label>
                             <input type="text" class="form-control" id="security_code" placeholder="" required />
-                            <b>Not remembered? <a href="https://wa.me/+15483333597?text=Hi, I forgot my security code." target='_blank'>click here to chat with us</a></b>
+                            <b>Not remembered? <a href="https://wa.me/+15483333597?text=Hi, I want/forgot my security code." target='_blank'>click here to chat with us</a></b>
                         </div>
                         <div class="m-3">
                             <label for="formGroupExampleInput" class="form-label">Password</label>

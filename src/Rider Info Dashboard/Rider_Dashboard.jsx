@@ -81,7 +81,7 @@ const Rider_Dashboard = () => {
               {/* <button className='btn btn-success p-5' style={{fontWeight:"bold"}} id='rider_status' onClick={click_me}>I am online</button> */}
             </div>
             {/* <br /> */}
-            <p className='text-center mt-5'><b>***Please be <b className='text-success'>online</b> to get passengers in WhatsApp.</b></p>
+            <p className='text-center mt-5'><b>***Please be <b className='text-success'>online</b> when you are available to ride. You will get passengers in WhatsApp.</b></p>
           </div>
         </div>
       </div>
