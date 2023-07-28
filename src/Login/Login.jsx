@@ -39,7 +39,7 @@ const Login = () => {
                     "fn" : response.data.user_data.full_name,
                     "whn" : response.data.user_data.whatsapp_no
                 }
-                sessionStorage.setItem("log_u_d",JSON.stringify(logged_user_data));
+                localStorage.setItem("log_u_d",JSON.stringify(logged_user_data));
                 window.location.href = "/rider_info";
             }else{
                 document.getElementById("login_btn").innerHTML = "Login";

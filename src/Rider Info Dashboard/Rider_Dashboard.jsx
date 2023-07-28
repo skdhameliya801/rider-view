@@ -9,7 +9,7 @@ const Rider_Dashboard = () => {
   const [is_rider_online, setIs_rider_online] = useState(false);
   
   useEffect(() => {
-      session_info = JSON.parse(sessionStorage.getItem("log_u_d"))
+      session_info = JSON.parse(localStorage.getItem("log_u_d"))
       // JSON.parse(sessionStorage.getItem("log_u_d"))
       // document.getElementById("response_message").style.display = "none";
       if(session_info != null){
