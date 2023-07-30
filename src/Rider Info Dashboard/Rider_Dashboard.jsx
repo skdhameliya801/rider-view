@@ -64,7 +64,7 @@ const Rider_Dashboard = () => {
         <div className="d-flex justify-content-center align-items-center" style={{"height":"100vh"}}>
           <div>
             <h1 className="text-center mt-2">Welcome, {session_info.fn}</h1>
-            <h2 className="text-center mt-5 text-warning">Get ready for both the way from KWC to Brantford route</h2>
+            <h2 className="text-center mt-5 text-warning">Get ready for KWC - Stratford rides</h2>
             <h3 className="text-center mt-5 text-success">WhatsApp No : {session_info.whn}</h3>
             <div className="text-center mt-5">
               {/* <h2 id="response_message" className='text-center bg-danger p-3 m-3'></h2> */}
@@ -81,7 +81,7 @@ const Rider_Dashboard = () => {
               {/* <button className='btn btn-success p-5' style={{fontWeight:"bold"}} id='rider_status' onClick={click_me}>I am online</button> */}
             </div>
             {/* <br /> */}
-            <p className='text-center mt-5'><b>***Please be <b className='text-success'>online</b> when you are available to ride. You will get passengers in WhatsApp.</b></p>
+            <p className='text-center mt-5'><b>***Please be <b className='text-success'>online</b> whenever you are available to ride. You will get passengers in WhatsApp, Only when are online.</b></p>
           </div>
         </div>
       </div>
